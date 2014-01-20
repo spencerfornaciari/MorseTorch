@@ -30,18 +30,11 @@
 - (NSString *)symbolForLetter:(NSString *)letter
 {
     
-    //    if ([letter rangeOfString:@" "].location == NSNotFound) {
-    //        letter = [letter uppercaseString];
-    //
-    //        return letter;
-    //
-    //    } else {
-    //        return @"No white space";
-    //    }
-    
     letter = [letter uppercaseString];
     //return letter;
     
+    
+    //Translation from alphanumeric character to morse code
     NSDictionary *symbolDictionary = @{@"A": @". -",
                                        @"B": @"- . . .",
                                        @"C": @"- . - .",

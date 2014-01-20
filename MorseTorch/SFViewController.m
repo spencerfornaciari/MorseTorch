@@ -24,10 +24,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    NSString *tempString = [NSString stringWithFormat:@"goodbye"];
-    
-    NSArray *tempArray = tempString ? [tempString symbolsForString] : @[@"String Was Nil"];
-    NSLog(@"%@", tempArray);
+    _morseCodeMessage.delegate = self;
+//    NSString *tempString = [NSString stringWithFormat:@"goodbye"];
+//    
+//    NSArray *tempArray = tempString ? [tempString symbolsForString] : @[@"String Was Nil"];
+//    NSLog(@"%@", tempArray);
     
     
 }
@@ -50,6 +51,11 @@
     
     _message = _morseCodeMessage.text;
    NSLog(@"%@", _message);
+    
+    //NSString *tempString = [NSString stringWithFormat:@"goodbye"];
+    
+    NSArray *tempArray = _message ? [_message symbolsForString] : @[@"String Was Nil"];
+    NSLog(@"%@", tempArray);
     
     [sender resignFirstResponder];
 }
