@@ -18,11 +18,20 @@
     
     for (int i = 0; i < noSpaces.length; i++)
     {
-        [tempArray addObject:[self symbolForLetter:[noSpaces substringWithRange:NSMakeRange(i, 1)]]];
+        //if ([tempArray[i] isEqualToString:@" "]){
+          //  NSLog(@"Not in there");
+        NSString *string = [self symbolForLetter:[noSpaces substringWithRange:NSMakeRange(i, 1)]];
+        NSLog(@"%@", string);
+        
+        if ([string isEqualToString:@""])
+        {
+            
+        }
+         else {
+             [tempArray addObject:string]; ///[self symbolForLetter:[noSpaces substringWithRange:NSMakeRange(i, 1)]]];
+        }
     }
-    
-   // NSDictionary *symbolDictionary =
-    
+        
     return  [NSArray arrayWithArray:tempArray];
     
 }
@@ -30,9 +39,15 @@
 - (NSString *)symbolForLetter:(NSString *)letter
 {
     
+    //Error checking
     letter = [letter uppercaseString];
-    //return letter;
+    NSCharacterSet *alphaNumSet = [NSCharacterSet characterSetWithCharactersInString:@"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"];
+    BOOL value = [alphaNumSet characterIsMember:[letter characterAtIndex:0]];
     
+    if (!value) {
+        return @"";
+    }
+    //letter = [letter stringByTrimmingCharactersInSet:alphaNumSet];
     
     //Translation from alphanumeric character to morse code
     NSDictionary *symbolDictionary = @{@"A": @". -",
@@ -75,6 +90,7 @@
     NSArray *dictArray = [symbolDictionary allKeys];
     
     for (int i = 0; i < dictArray.count; i++) {
+        
         if ([dictArray[i] isEqualToString:letter]) {
             return [symbolDictionary valueForKey:dictArray[i]];
         }
