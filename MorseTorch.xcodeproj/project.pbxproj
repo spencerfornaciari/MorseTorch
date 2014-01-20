@@ -21,6 +21,7 @@
 		8949F70D188DC2C10069E9D4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8949F6EF188DC2C10069E9D4 /* UIKit.framework */; };
 		8949F715188DC2C10069E9D4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8949F713188DC2C10069E9D4 /* InfoPlist.strings */; };
 		8949F717188DC2C10069E9D4 /* MorseTorchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8949F716188DC2C10069E9D4 /* MorseTorchTests.m */; };
+		8949F722188DC2EF0069E9D4 /* NSString+MorseCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8949F721188DC2EF0069E9D4 /* NSString+MorseCode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		8949F712188DC2C10069E9D4 /* MorseTorchTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MorseTorchTests-Info.plist"; sourceTree = "<group>"; };
 		8949F714188DC2C10069E9D4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8949F716188DC2C10069E9D4 /* MorseTorchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MorseTorchTests.m; sourceTree = "<group>"; };
+		8949F720188DC2EF0069E9D4 /* NSString+MorseCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+MorseCode.h"; path = "../NSString+MorseCode.h"; sourceTree = "<group>"; };
+		8949F721188DC2EF0069E9D4 /* NSString+MorseCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+MorseCode.m"; path = "../NSString+MorseCode.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,8 @@
 		8949F6F1188DC2C10069E9D4 /* MorseTorch */ = {
 			isa = PBXGroup;
 			children = (
+				8949F720188DC2EF0069E9D4 /* NSString+MorseCode.h */,
+				8949F721188DC2EF0069E9D4 /* NSString+MorseCode.m */,
 				8949F6FA188DC2C10069E9D4 /* SFAppDelegate.h */,
 				8949F6FB188DC2C10069E9D4 /* SFAppDelegate.m */,
 				8949F6FD188DC2C10069E9D4 /* Main.storyboard */,
@@ -253,6 +258,7 @@
 				8949F6F8188DC2C10069E9D4 /* main.m in Sources */,
 				8949F702188DC2C10069E9D4 /* SFViewController.m in Sources */,
 				8949F6FC188DC2C10069E9D4 /* SFAppDelegate.m in Sources */,
+				8949F722188DC2EF0069E9D4 /* NSString+MorseCode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -18,6 +18,18 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    NSString *tempString = [NSString stringWithFormat:@"hel lo"];
+    
+    NSArray *tempArray = tempString ? [tempString symbolsForString] : @[@"String Was Nil"];
+    NSLog(@"%@", tempArray);
+    
+    //    if (tempString) {
+    //        NSArray *tempArray = [tempString symbolsForString];
+    //        NSLog(@"%@", tempArray);
+    //    } else {
+    //        //handle error
+    //    }
+    
 }
 
 - (void)didReceiveMemoryWarning
