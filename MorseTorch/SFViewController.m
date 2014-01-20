@@ -11,6 +11,7 @@
 @interface SFViewController ()
 
 @property (strong, nonatomic) IBOutlet UITextField *morseCodeMessage;
+@property (strong, nonatomic) IBOutlet UIButton *morseButton;
 
 - (IBAction)submitMessage:(id)sender;
 
@@ -25,6 +26,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     _morseCodeMessage.delegate = self;
+    _morseButton.backgroundColor = [UIColor redColor];
+    _morseButton.tintColor = [UIColor whiteColor];
 }
 
 - (void)didReceiveMemoryWarning
