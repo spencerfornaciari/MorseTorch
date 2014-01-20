@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "NSString+MorseCode.h"
 
-@interface SFViewController : UIViewController
+@interface SFViewController : UIViewController <UITextFieldDelegate>
 
 @end

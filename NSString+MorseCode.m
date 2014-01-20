@@ -21,6 +21,8 @@
         [tempArray addObject:[self symbolForLetter:[noSpaces substringWithRange:NSMakeRange(i, 1)]]];
     }
     
+   // NSDictionary *symbolDictionary =
+    
     return  [NSArray arrayWithArray:tempArray];
     
 }
@@ -38,7 +40,54 @@
     //    }
     
     letter = [letter uppercaseString];
-    return letter;
+    //return letter;
+    
+    NSDictionary *symbolDictionary = @{@"A": @". -",
+                                       @"B": @"- . . .",
+                                       @"C": @"- . - .",
+                                       @"D": @"- . .",
+                                       @"E": @".",
+                                       @"F": @". . - .",
+                                       @"G": @"- - .",
+                                       @"H": @". . . .",
+                                       @"I": @". .",
+                                       @"J": @". - - -",
+                                       @"K": @"- . -",
+                                       @"L": @". - . .",
+                                       @"M": @"- -",
+                                       @"N": @"- .",
+                                       @"O": @"- - -",
+                                       @"P": @". - - .",
+                                       @"Q": @"- - . -",
+                                       @"R": @". - .",
+                                       @"S": @". . .",
+                                       @"T": @"-",
+                                       @"U": @". . -",
+                                       @"V": @". . . -",
+                                       @"W": @". - -",
+                                       @"X": @"- . . -",
+                                       @"Y": @"- . - -",
+                                       @"Z": @"- - . .",
+                                       @"0": @"- - - - -",
+                                       @"1": @". - - - -",
+                                       @"2": @". . - - -",
+                                       @"3": @". . . - -",
+                                       @"4": @". . . . -",
+                                       @"5": @". . . . .",
+                                       @"6": @"- . . . .",
+                                       @"7": @"- - . . .",
+                                       @"8": @"- - - . .",
+                                       @"9": @"- - - - ."};
+    
+    NSArray *dictArray = [symbolDictionary allKeys];
+    
+    for (int i = 0; i < dictArray.count; i++) {
+        if ([dictArray[i] isEqualToString:letter]) {
+            return [symbolDictionary valueForKey:dictArray[i]];
+        }
+    }
+    
+    return @"None";
 }
 
 @end
