@@ -25,12 +25,6 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     _morseCodeMessage.delegate = self;
-//    NSString *tempString = [NSString stringWithFormat:@"goodbye"];
-//    
-//    NSArray *tempArray = tempString ? [tempString symbolsForString] : @[@"String Was Nil"];
-//    NSLog(@"%@", tempArray);
-    
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -39,20 +33,10 @@
     // Dispose of any resources that can be recreated.
 }
 
-//- (void)textFieldDidEndEditing:(UITextField *)textField
-//{
-//    NSLog(@"%@", textField);
-//}
-
-
-
-
-- (IBAction)submitMessage:(id)sender {
-    
+- (IBAction)submitMessage:(id)sender
+{
+    //Grab text from UITextField and convert to morse code
     _message = _morseCodeMessage.text;
-   NSLog(@"%@", _message);
-    
-    //NSString *tempString = [NSString stringWithFormat:@"goodbye"];
     
     NSArray *tempArray = _message ? [_message symbolsForString] : @[@"String Was Nil"];
     NSLog(@"%@", tempArray);

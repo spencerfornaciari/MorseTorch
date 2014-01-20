@@ -16,29 +16,25 @@
     
     NSString *noSpaces = [self stringByReplacingOccurrencesOfString:@" " withString:@""];
     
+    //Grab morse code and check if the value is not alphanumeric
     for (int i = 0; i < noSpaces.length; i++)
     {
-        //if ([tempArray[i] isEqualToString:@" "]){
-          //  NSLog(@"Not in there");
         NSString *string = [self symbolForLetter:[noSpaces substringWithRange:NSMakeRange(i, 1)]];
-        NSLog(@"%@", string);
         
         if ([string isEqualToString:@""])
         {
             
         }
          else {
-             [tempArray addObject:string]; ///[self symbolForLetter:[noSpaces substringWithRange:NSMakeRange(i, 1)]]];
+             [tempArray addObject:string];
         }
     }
         
     return  [NSArray arrayWithArray:tempArray];
-    
 }
 
 - (NSString *)symbolForLetter:(NSString *)letter
 {
-    
     //Error checking
     letter = [letter uppercaseString];
     NSCharacterSet *alphaNumSet = [NSCharacterSet characterSetWithCharactersInString:@"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"];
@@ -47,7 +43,6 @@
     if (!value) {
         return @"";
     }
-    //letter = [letter stringByTrimmingCharactersInSet:alphaNumSet];
     
     //Translation from alphanumeric character to morse code
     NSDictionary *symbolDictionary = @{@"A": @". -",
