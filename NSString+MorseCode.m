@@ -14,7 +14,7 @@
 {
     NSMutableArray *tempArray = [NSMutableArray new];
     
-    NSString *noSpaces = [self stringByReplacingOccurrencesOfString:@" " withString:@""];
+    NSString *noSpaces = self; //[self stringByReplacingOccurrencesOfString:@" " withString:@""];
     
     //Grab morse code and check if the value is not alphanumeric
     for (int i = 0; i < noSpaces.length; i++)
@@ -37,7 +37,7 @@
 {
     //Error checking
     letter = [letter uppercaseString];
-    NSCharacterSet *alphaNumSet = [NSCharacterSet characterSetWithCharactersInString:@"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"];
+    NSCharacterSet *alphaNumSet = [NSCharacterSet characterSetWithCharactersInString:@"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 "];
     BOOL value = [alphaNumSet characterIsMember:[letter characterAtIndex:0]];
     
     if (!value) {
@@ -80,7 +80,8 @@
                                        @"6": @"-....",
                                        @"7": @"--...",
                                        @"8": @"---..",
-                                       @"9": @"----."};
+                                       @"9": @"----.",
+                                       @" ": @" "};
     
     NSArray *dictArray = [symbolDictionary allKeys];
     
@@ -93,7 +94,5 @@
     
     return @"None";
 }
-
-
 
 @end

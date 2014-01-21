@@ -8,9 +8,21 @@
 
 #import "TorchController.h"
 
-#define SLEEPTIME 300000;
-
 @implementation TorchController
+{
+    NSOperationQueue *flashQueue;
+}
+
+- (id)init
+{
+    if (self = [super init])
+    {
+        flashQueue = [NSOperationQueue new];
+        flashQueue.maxConcurrentOperationCount = 1;
+    }
+    
+    return self;
+}
 
 - (void)shortFlash
 {
@@ -69,9 +81,8 @@
     //NSString *noSpaces = [self stringByReplacingOccurrencesOfString:@" " withString:@""];
     
     //Grab morse code and check if the value is not alphanumeric
-   NSOperationQueue *flashQueue = [NSOperationQueue new];
-    flashQueue.maxConcurrentOperationCount = 1;
-   //[flashQueue maxConcurrentOperationCount = 1]];
+  // flashQueue = [NSOperationQueue new];
+   // flashQueue.maxConcurrentOperationCount = 1;
     
   [flashQueue addOperationWithBlock:^{
       for (int i = 0; i < letter.length; i++)

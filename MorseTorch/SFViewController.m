@@ -62,13 +62,13 @@
     NSString *newString = tempArray[0];
     NSLog(@"%@", newString);
     
-    [self.morseButton setTitle:@"Cancel" forState:UIControlStateNormal];
+   // [self.morseButton setTitle:@"Cancel" forState:UIControlStateNormal];
 
+    TorchController *controller = [TorchController new];
     
-    for (NSString *string in tempArray) {
-        TorchController *controller = [TorchController new];
+   for (NSString *string in tempArray) {
         [controller flashForSymbol:string];
-        self.morseCodeLabel.text = string;
+       // self.morseCodeLabel.text = string;
         //;
     }
     
