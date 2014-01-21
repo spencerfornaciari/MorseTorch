@@ -9,8 +9,15 @@
 #import <Foundation/Foundation.h>
 @import AVFoundation;
 
+@protocol TorchControllerDelegate <NSObject>
+@required
+- (void)currentPosition;
+
+@end
+
 @interface TorchController : NSObject
 
+@property (nonatomic, weak) id<TorchControllerDelegate> delegate;
 - (void)flashForSymbol:(NSString *)letter;
 
 @end

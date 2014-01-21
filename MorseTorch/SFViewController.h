@@ -11,6 +11,6 @@
 #import "TorchController.h"
 #import "NSString+MorseCode.h"
 
-@interface SFViewController : UIViewController <UITextFieldDelegate>
+@interface SFViewController : UIViewController <UITextFieldDelegate, TorchControllerDelegate>
 
 @end

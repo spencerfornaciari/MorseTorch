@@ -8,6 +8,8 @@
 
 #import "TorchController.h"
 
+#define SLEEPTIME 300000;
+
 @implementation TorchController
 
 - (void)shortFlash
@@ -15,9 +17,9 @@
     AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     if ([device hasTorch] && [device hasFlash]) {
         [self turnOnTorch:device];
-        usleep(200000);
+        usleep(400000);
         [self turnOffTorch:device];
-        usleep(200000);
+        usleep(400000);
     }
 }
 
@@ -27,9 +29,9 @@
     if ([device hasTorch] && [device hasFlash]) {
         [self turnOnTorch:device];
         //sleep(3);
-        usleep(600000);
+        usleep(1200000);
         [self turnOffTorch:device];
-        usleep(200000);
+        usleep(400000);
     }
 }
 
@@ -37,7 +39,7 @@
 {
     AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     if ([device hasTorch] && [device hasFlash]) {
-        usleep(1000000);
+        usleep(2000000);
     }
 }
 
@@ -67,29 +69,30 @@
     //NSString *noSpaces = [self stringByReplacingOccurrencesOfString:@" " withString:@""];
     
     //Grab morse code and check if the value is not alphanumeric
-   // NSOperationQueue *flashQueue = [NSOperationQueue new];
-   // [flashQueue maxConcurrentOperationCount = 1];
+   NSOperationQueue *flashQueue = [NSOperationQueue new];
+    flashQueue.maxConcurrentOperationCount = 1;
+   //[flashQueue maxConcurrentOperationCount = 1]];
     
-  //  [flashQueue addOperationWithBlock:<#^(void)block#>
-    
-    for (int i = 0; i < letter.length; i++)
-    {
-        NSString *string = [letter substringWithRange:NSMakeRange(i, 1)];
-        
-        if ([string isEqualToString:@"."]) {
-            NSLog(@"It is a dot");
-            [self shortFlash];
-        } else if ([string isEqualToString:@"-"])
-        {
-            NSLog(@"It is a dash");
-            [self longFlash];
-        } else
-        {
-            NSLog(@"It is a space");
-            [self pauseBetweenWords];
-        }
-    }
-    
+  [flashQueue addOperationWithBlock:^{
+      for (int i = 0; i < letter.length; i++)
+      {
+          NSString *string = [letter substringWithRange:NSMakeRange(i, 1)];
+          
+          if ([string isEqualToString:@"."]) {
+              NSLog(@"It is a dot");
+              [self shortFlash];
+          } else if ([string isEqualToString:@"-"])
+          {
+              NSLog(@"It is a dash");
+              [self longFlash];
+          } else
+          {
+              NSLog(@"It is a space");
+              [self pauseBetweenWords];
+          }
+      }
+  }];
+   
 }
 
 
