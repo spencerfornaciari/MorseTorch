@@ -9,6 +9,10 @@
 #import "SFViewController.h"
 
 @interface SFViewController ()
+{
+    BOOL lock;
+    AVCaptureDevice *torch;
+}
 
 @property (strong, nonatomic) IBOutlet UITextField *morseCodeMessage;
 @property (strong, nonatomic) IBOutlet UIButton *morseButton;
@@ -28,6 +32,7 @@
     _morseCodeMessage.delegate = self;
     _morseButton.backgroundColor = [UIColor redColor];
     _morseButton.tintColor = [UIColor whiteColor];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,7 +47,13 @@
     _message = _morseCodeMessage.text;
     
     NSArray *tempArray = _message ? [_message symbolsForString] : @[@"String Was Nil"];
-    NSLog(@"%@", tempArray);
+    NSString *newString = tempArray[0];
+    NSLog(@"%@", newString);
+    
+    for (NSString *string in tempArray) {
+        TorchController *controller = [TorchController new];
+        [controller flashForSymbol:string];
+    }
     
     [sender resignFirstResponder];
 }
@@ -52,5 +63,7 @@
     [textField resignFirstResponder];
     return YES;
 }
+
+
 
 @end

@@ -22,6 +22,7 @@
 		8949F715188DC2C10069E9D4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8949F713188DC2C10069E9D4 /* InfoPlist.strings */; };
 		8949F717188DC2C10069E9D4 /* MorseTorchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8949F716188DC2C10069E9D4 /* MorseTorchTests.m */; };
 		8949F722188DC2EF0069E9D4 /* NSString+MorseCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8949F721188DC2EF0069E9D4 /* NSString+MorseCode.m */; };
+		898F4CB8188F21BD0060E847 /* TorchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 898F4CB7188F21BD0060E847 /* TorchController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		8949F716188DC2C10069E9D4 /* MorseTorchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MorseTorchTests.m; sourceTree = "<group>"; };
 		8949F720188DC2EF0069E9D4 /* NSString+MorseCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+MorseCode.h"; path = "../NSString+MorseCode.h"; sourceTree = "<group>"; };
 		8949F721188DC2EF0069E9D4 /* NSString+MorseCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+MorseCode.m"; path = "../NSString+MorseCode.m"; sourceTree = "<group>"; };
+		898F4CB6188F21BD0060E847 /* TorchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TorchController.h; path = ../TorchController.h; sourceTree = "<group>"; };
+		898F4CB7188F21BD0060E847 /* TorchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TorchController.m; path = ../TorchController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 		8949F6F1188DC2C10069E9D4 /* MorseTorch */ = {
 			isa = PBXGroup;
 			children = (
+				898F4CB6188F21BD0060E847 /* TorchController.h */,
+				898F4CB7188F21BD0060E847 /* TorchController.m */,
 				8949F720188DC2EF0069E9D4 /* NSString+MorseCode.h */,
 				8949F721188DC2EF0069E9D4 /* NSString+MorseCode.m */,
 				8949F6FA188DC2C10069E9D4 /* SFAppDelegate.h */,
@@ -255,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				898F4CB8188F21BD0060E847 /* TorchController.m in Sources */,
 				8949F6F8188DC2C10069E9D4 /* main.m in Sources */,
 				8949F702188DC2C10069E9D4 /* SFViewController.m in Sources */,
 				8949F6FC188DC2C10069E9D4 /* SFAppDelegate.m in Sources */,
@@ -467,6 +473,7 @@
 				8949F71C188DC2C10069E9D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8949F71D188DC2C10069E9D4 /* Build configuration list for PBXNativeTarget "MorseTorchTests" */ = {
 			isa = XCConfigurationList;
@@ -475,6 +482,7 @@
 				8949F71F188DC2C10069E9D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
