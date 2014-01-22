@@ -42,6 +42,7 @@
     _cancelButton.tintColor = [UIColor whiteColor];
     
     _morseButton.enabled = NO;
+    _cancelButton.enabled = NO;
     self.controller = [TorchController new];
     self.controller.delegate = self;
     
@@ -64,7 +65,8 @@
 - (IBAction)submitMessage:(id)sender
 {
     //[self.morseButton setTitle:@"Cancel" forState:UIControlStateNormal];
-
+    _cancelButton.enabled = YES;
+    _morseButton.enabled = NO;
     self.controller.isLastSymbol = NO;
     _message = _morseCodeMessage.text;
     
@@ -73,7 +75,9 @@
    for (NSString *string in tempArray) {
        if ([tempArray lastObject] == string)
        {
-           self.controller.isLastSymbol = YES;
+           //self.controller.isLastSymbol = YES;
+           //_morseButton.enabled = YES;
+           
            NSLog(@"The last symbol is: %@", string);
        }
        
@@ -118,6 +122,8 @@
 
 - (void)cancelTorch
 {
+    _morseButton.enabled = YES;
+    _cancelButton.enabled = NO;
     [self.controller.flashQueue cancelAllOperations];
 }
 
