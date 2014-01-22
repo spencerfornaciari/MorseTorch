@@ -33,7 +33,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    //self.morseCodeLabel.text = @"NEW";
+
 	// Do any additional setup after loading the view, typically from a nib.
     _morseCodeMessage.delegate = self;
     _morseButton.backgroundColor = [UIColor redColor];
@@ -45,11 +45,6 @@
     _cancelButton.enabled = NO;
     self.controller = [TorchController new];
     self.controller.delegate = self;
-    
-//    if (!_morseCodeMessage.text) {
-//        _morseButton.enabled = NO;
-//    }
-
 }
 
 - (void)didReceiveMemoryWarning
@@ -71,17 +66,17 @@
     _message = _morseCodeMessage.text;
     
     NSArray *tempArray = _message ? [_message symbolsForString] : @[@"String Was Nil"];
-    
+    int i = 0;
    for (NSString *string in tempArray) {
-       if ([tempArray lastObject] == string)
+       if (i == (tempArray.count - 1))
        {
-           //self.controller.isLastSymbol = YES;
-           //_morseButton.enabled = YES;
-           
-           NSLog(@"The last symbol is: %@", string);
+           [self.controller flashForSymbol:string isLast:TRUE];
+           //NSLog(@"The last symbol is: %@", string);
+       } else {
+           [self.controller flashForSymbol:string isLast:FALSE];
        }
        
-       [self.controller flashForSymbol:string];
+       i++;
     }
     
 //    if (self.controller.isLastSymbol) {
@@ -115,7 +110,10 @@
 {
     NSLog(@"Delegate Receiving: %@", string);
     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+        
+        
         NSString *letter = [NSString letterForSymbol:string];
+        [ProgressHUD show:letter];
         self.morseCodeLabel.text = letter;
     }];
 }
@@ -127,7 +125,10 @@
     [self.controller.flashQueue cancelAllOperations];
 }
 
-
+- (void)lastSymbol
+{
+    [ProgressHUD dismiss];
+}
 
 
 @end

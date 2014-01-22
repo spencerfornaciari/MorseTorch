@@ -75,7 +75,7 @@
 
 }
 
-- (void)flashForSymbol:(NSString *)letter
+- (void)flashForSymbol:(NSString *)string isLast:(BOOL)isLast
 {
    // NSMutableArray *tempArray = [NSMutableArray new];
     
@@ -91,16 +91,18 @@
     
     
   [_flashQueue addOperationWithBlock:^{
-      [self.delegate currentPosition:letter];
+      [self.delegate currentPosition:string];
       
-      for (int i = 0; i < letter.length; i++)
+
+      
+      for (int i = 0; i < string.length; i++)
       {
-          NSString *string = [letter substringWithRange:NSMakeRange(i, 1)];
+          NSString *symbolElement = [string substringWithRange:NSMakeRange(i, 1)];
           
-          if ([string isEqualToString:@"."]) {
+          if ([symbolElement isEqualToString:@"."]) {
               NSLog(@"It is a dot");
               [self shortFlash];
-          } else if ([string isEqualToString:@"-"])
+          } else if ([symbolElement isEqualToString:@"-"])
           {
               NSLog(@"It is a dash");
               [self longFlash];
@@ -108,6 +110,12 @@
           {
               NSLog(@"It is a space");
               [self pauseBetweenWords];
+          }
+          
+          if (i == (string.length - 1) && isLast) {
+              [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                  [self.delegate lastSymbol];
+              }];
           }
       }
       

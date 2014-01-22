@@ -10,6 +10,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import "TorchController.h"
 #import "NSString+MorseCode.h"
+#import <ProgressHUD.h>
 
 @interface SFViewController : UIViewController <UITextFieldDelegate, TorchControllerDelegate>
 
