@@ -18,6 +18,9 @@
 @property (strong, nonatomic) IBOutlet UITextField *morseCodeMessage;
 @property (strong, nonatomic) IBOutlet UIButton *morseButton;
 @property (nonatomic) TorchController *controller;
+@property (strong, nonatomic) IBOutlet UIButton *cancelButton;
+
+- (IBAction)cancelMessage:(id)sender;
 
 - (IBAction)submitMessage:(id)sender;
 
@@ -35,6 +38,9 @@
     _morseCodeMessage.delegate = self;
     _morseButton.backgroundColor = [UIColor redColor];
     _morseButton.tintColor = [UIColor whiteColor];
+    _cancelButton.backgroundColor = [UIColor blueColor];
+    _cancelButton.tintColor = [UIColor whiteColor];
+    
     _morseButton.enabled = NO;
     self.controller = [TorchController new];
     self.controller.delegate = self;
@@ -51,21 +57,32 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)cancelMessage:(id)sender {
+    [self cancelTorch];
+}
+
 - (IBAction)submitMessage:(id)sender
 {
+    //[self.morseButton setTitle:@"Cancel" forState:UIControlStateNormal];
+
+    self.controller.isLastSymbol = NO;
     _message = _morseCodeMessage.text;
     
     NSArray *tempArray = _message ? [_message symbolsForString] : @[@"String Was Nil"];
     
-   // [self.morseButton setTitle:@"Cancel" forState:UIControlStateNormal];
-
    for (NSString *string in tempArray) {
        if ([tempArray lastObject] == string)
        {
            self.controller.isLastSymbol = YES;
+           NSLog(@"The last symbol is: %@", string);
        }
-        [self.controller flashForSymbol:string];
+       
+       [self.controller flashForSymbol:string];
     }
+    
+//    if (self.controller.isLastSymbol) {
+//        [self.morseButton setTitle:@"Submit" forState:UIControlStateNormal];
+//    }
     
     [sender resignFirstResponder];
 }
@@ -98,6 +115,13 @@
         self.morseCodeLabel.text = letter;
     }];
 }
+
+- (void)cancelTorch
+{
+    [self.controller.flashQueue cancelAllOperations];
+}
+
+
 
 
 @end

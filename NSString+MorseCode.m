@@ -97,8 +97,6 @@
 
 + (NSString *)letterForSymbol:(NSString *)symbol
 {
-
-        //Error checking
         
         //Translation from alphanumeric character to morse code
         NSDictionary *symbolDictionary = @{@"A": @".-",

@@ -12,7 +12,7 @@
 @protocol TorchControllerDelegate <NSObject>
 @required
 - (void)currentPosition:(NSString *)string;
-
+- (void)cancelTorch;
 
 @end
 
@@ -20,6 +20,7 @@
 
 @property (nonatomic, unsafe_unretained) id<TorchControllerDelegate> delegate;
 - (void)flashForSymbol:(NSString *)letter;
+@property (nonatomic) NSOperationQueue *flashQueue;
 @property (nonatomic) BOOL isLastSymbol;
 
 @end

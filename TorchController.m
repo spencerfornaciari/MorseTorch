@@ -10,7 +10,7 @@
 
 @implementation TorchController
 {
-    NSOperationQueue *flashQueue;
+    //NSOperationQueue *flashQueue;
     BOOL isRunning;
 }
 
@@ -18,8 +18,8 @@
 {
     if (self = [super init])
     {
-        flashQueue = [NSOperationQueue new];
-        flashQueue.maxConcurrentOperationCount = 1;
+        _flashQueue = [NSOperationQueue new];
+        _flashQueue.maxConcurrentOperationCount = 1;
     }
     
     return self;
@@ -90,7 +90,7 @@
     }
     
     
-  [flashQueue addOperationWithBlock:^{
+  [_flashQueue addOperationWithBlock:^{
       [self.delegate currentPosition:letter];
       
       for (int i = 0; i < letter.length; i++)
@@ -111,7 +111,7 @@
           }
       }
       
-      isRunning = NO;
+      
   }];
    
 }
