@@ -42,7 +42,9 @@
     _cancelButton.tintColor = [UIColor whiteColor];
     
     _morseButton.enabled = NO;
+    _morseButton.alpha = 1;
     _cancelButton.enabled = NO;
+    _cancelButton.alpha = 0;
     self.controller = [TorchController new];
     self.controller.delegate = self;
 }
@@ -53,15 +55,20 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Button actions
+
 - (IBAction)cancelMessage:(id)sender {
     [self cancelTorch];
 }
 
 - (IBAction)submitMessage:(id)sender
 {
-    //[self.morseButton setTitle:@"Cancel" forState:UIControlStateNormal];
     _cancelButton.enabled = YES;
-    _morseButton.enabled = NO;
+    
+    [UIView animateWithDuration:.5 animations:^{
+        _morseButton.alpha = 0;
+        _cancelButton.alpha = 1;
+    }];
     self.controller.isLastSymbol = NO;
     _message = _morseCodeMessage.text;
     
@@ -71,7 +78,6 @@
        if (i == (tempArray.count - 1))
        {
            [self.controller flashForSymbol:string isLast:TRUE];
-           //NSLog(@"The last symbol is: %@", string);
        } else {
            [self.controller flashForSymbol:string isLast:FALSE];
        }
@@ -79,12 +85,10 @@
        i++;
     }
     
-//    if (self.controller.isLastSymbol) {
-//        [self.morseButton setTitle:@"Submit" forState:UIControlStateNormal];
-//    }
-    
     [sender resignFirstResponder];
 }
+
+#pragma mark - UITextField Delegate Methods
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
@@ -106,28 +110,36 @@
     }
 }
 
+#pragma mark - TorchController Delegate Methods
+
 - (void)currentPosition:(NSString *)string
 {
     NSLog(@"Delegate Receiving: %@", string);
     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
         
-        
         NSString *letter = [NSString letterForSymbol:string];
         [ProgressHUD show:letter];
-        self.morseCodeLabel.text = letter;
     }];
 }
 
 - (void)cancelTorch
 {
-    _morseButton.enabled = YES;
-    _cancelButton.enabled = NO;
+    [UIView animateWithDuration:1 animations:^{
+        _morseButton.alpha = 1;
+        _cancelButton.alpha = 0;
+    }];
     [self.controller.flashQueue cancelAllOperations];
+    [ProgressHUD dismiss];
+
 }
 
 - (void)lastSymbol
 {
     [ProgressHUD dismiss];
+    [UIView animateWithDuration:.5 animations:^{
+        _morseButton.alpha = 1;
+        _cancelButton.alpha = 0;
+    }];
 }
 
 

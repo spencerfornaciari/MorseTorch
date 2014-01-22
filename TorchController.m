@@ -8,11 +8,9 @@
 
 #import "TorchController.h"
 
+#define BASE_SLEEP 400000
+
 @implementation TorchController
-{
-    //NSOperationQueue *flashQueue;
-    BOOL isRunning;
-}
 
 - (id)init
 {
@@ -25,14 +23,15 @@
     return self;
 }
 
+#pragma mark - Morse Code Signals
 - (void)shortFlash
 {
     AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     if ([device hasTorch] && [device hasFlash]) {
         [self turnOnTorch:device];
-        usleep(400000);
+        usleep(BASE_SLEEP);
         [self turnOffTorch:device];
-        usleep(400000);
+        usleep(BASE_SLEEP);
     }
 }
 
@@ -41,10 +40,9 @@
     AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     if ([device hasTorch] && [device hasFlash]) {
         [self turnOnTorch:device];
-        //sleep(3);
-        usleep(1200000);
+        usleep(BASE_SLEEP * 3);
         [self turnOffTorch:device];
-        usleep(400000);
+        usleep(BASE_SLEEP);
     }
 }
 
@@ -52,10 +50,11 @@
 {
     AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     if ([device hasTorch] && [device hasFlash]) {
-        usleep(2000000);
+        usleep(BASE_SLEEP * 5);
     }
 }
 
+#pragma mark - Flash On/Off Methods
 - (void)turnOnTorch:(AVCaptureDevice *)device
 {
     [device lockForConfiguration:nil];
@@ -75,26 +74,12 @@
 
 }
 
+#pragma mark - Parse morse code flash from symbol
 - (void)flashForSymbol:(NSString *)string isLast:(BOOL)isLast
 {
-   // NSMutableArray *tempArray = [NSMutableArray new];
-    
-    //NSString *noSpaces = [self stringByReplacingOccurrencesOfString:@" " withString:@""];
-    
-    //Grab morse code and check if the value is not alphanumeric
-  // flashQueue = [NSOperationQueue new];
-   // flashQueue.maxConcurrentOperationCount = 1;
-    
-    if (!isRunning) {
-        isRunning = YES;
-    }
-    
-    
   [_flashQueue addOperationWithBlock:^{
       [self.delegate currentPosition:string];
-      
-
-      
+    
       for (int i = 0; i < string.length; i++)
       {
           NSString *symbolElement = [string substringWithRange:NSMakeRange(i, 1)];
@@ -118,13 +103,8 @@
               }];
           }
       }
-      
-      
   }];
    
 }
-
-
-
 
 @end
