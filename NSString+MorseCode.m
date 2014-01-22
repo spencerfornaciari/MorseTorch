@@ -14,7 +14,7 @@
 {
     NSMutableArray *tempArray = [NSMutableArray new];
     
-    NSString *noSpaces = self; //[self stringByReplacingOccurrencesOfString:@" " withString:@""];
+    NSString *noSpaces = self;
     
     //Grab morse code and check if the value is not alphanumeric
     for (int i = 0; i < noSpaces.length; i++)
@@ -45,7 +45,7 @@
     }
     
     //Translation from alphanumeric character to morse code
-    NSDictionary *symbolDictionary = @{@"A": @".",
+    NSDictionary *symbolDictionary = @{@"A": @".-",
                                        @"B": @"-...",
                                        @"C": @"-.-.",
                                        @"D": @"-..",
@@ -94,5 +94,64 @@
     
     return @"None";
 }
+
++ (NSString *)letterForSymbol:(NSString *)symbol
+{
+
+        //Error checking
+        
+        //Translation from alphanumeric character to morse code
+        NSDictionary *symbolDictionary = @{@"A": @".-",
+                                           @"B": @"-...",
+                                           @"C": @"-.-.",
+                                           @"D": @"-..",
+                                           @"E": @".",
+                                           @"F": @"..-.",
+                                           @"G": @"--.",
+                                           @"H": @"....",
+                                           @"I": @"..",
+                                           @"J": @".---",
+                                           @"K": @"-.-",
+                                           @"L": @".-..",
+                                           @"M": @"--",
+                                           @"N": @"-.",
+                                           @"O": @"---",
+                                           @"P": @".--.",
+                                           @"Q": @"--.-",
+                                           @"R": @".-.",
+                                           @"S": @"...",
+                                           @"T": @"-",
+                                           @"U": @"..-",
+                                           @"V": @"...-",
+                                           @"W": @".--",
+                                           @"X": @"-..-",
+                                           @"Y": @"-.--",
+                                           @"Z": @"--..",
+                                           @"0": @"-----",
+                                           @"1": @".----",
+                                           @"2": @"..---",
+                                           @"3": @"...--",
+                                           @"4": @"....-",
+                                           @"5": @".....",
+                                           @"6": @"-....",
+                                           @"7": @"--...",
+                                           @"8": @"---..",
+                                           @"9": @"----.",
+                                           @" ": @" "};
+        
+        NSArray *dictArray = [symbolDictionary allKeysForObject:symbol];
+        return dictArray[0];
+    
+//        for (int i = 0; i < dictArray.count; i++) {
+//            
+//            if ([dictArray[i] isEqualToString:symbol]) {
+//                return [symbolDictionary objectForKey:dictArray[i]];
+//            }
+//        }
+//    
+//        return @"None";
+
+}
+
 
 @end

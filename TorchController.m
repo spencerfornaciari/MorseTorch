@@ -11,6 +11,7 @@
 @implementation TorchController
 {
     NSOperationQueue *flashQueue;
+    BOOL isRunning;
 }
 
 - (id)init
@@ -84,7 +85,14 @@
   // flashQueue = [NSOperationQueue new];
    // flashQueue.maxConcurrentOperationCount = 1;
     
+    if (!isRunning) {
+        isRunning = YES;
+    }
+    
+    
   [flashQueue addOperationWithBlock:^{
+      [self.delegate currentPosition:letter];
+      
       for (int i = 0; i < letter.length; i++)
       {
           NSString *string = [letter substringWithRange:NSMakeRange(i, 1)];
@@ -102,9 +110,13 @@
               [self pauseBetweenWords];
           }
       }
+      
+      isRunning = NO;
   }];
    
 }
+
+
 
 
 @end

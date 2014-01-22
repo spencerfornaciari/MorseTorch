@@ -14,9 +14,10 @@
     AVCaptureDevice *torch;
 }
 
-@property (strong, nonatomic) IBOutlet UILabel *morseCodeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *morseCodeLabel;
 @property (strong, nonatomic) IBOutlet UITextField *morseCodeMessage;
 @property (strong, nonatomic) IBOutlet UIButton *morseButton;
+@property (nonatomic) TorchController *controller;
 
 - (IBAction)submitMessage:(id)sender;
 
@@ -35,6 +36,8 @@
     _morseButton.backgroundColor = [UIColor redColor];
     _morseButton.tintColor = [UIColor whiteColor];
     _morseButton.enabled = NO;
+    self.controller = [TorchController new];
+    self.controller.delegate = self;
     
 //    if (!_morseCodeMessage.text) {
 //        _morseButton.enabled = NO;
@@ -50,26 +53,18 @@
 
 - (IBAction)submitMessage:(id)sender
 {
-    //Grab text from UITextField and convert to morse code
-
-//    } else {
-//        _morseButton.enabled = YES;
-//    }
-    
     _message = _morseCodeMessage.text;
     
     NSArray *tempArray = _message ? [_message symbolsForString] : @[@"String Was Nil"];
-    NSString *newString = tempArray[0];
-    NSLog(@"%@", newString);
     
    // [self.morseButton setTitle:@"Cancel" forState:UIControlStateNormal];
 
-    TorchController *controller = [TorchController new];
-    
    for (NSString *string in tempArray) {
-        [controller flashForSymbol:string];
-       // self.morseCodeLabel.text = string;
-        //;
+       if ([tempArray lastObject] == string)
+       {
+           self.controller.isLastSymbol = YES;
+       }
+        [self.controller flashForSymbol:string];
     }
     
     [sender resignFirstResponder];
@@ -95,9 +90,13 @@
     }
 }
 
-- (void)currentPosition
+- (void)currentPosition:(NSString *)string
 {
-    
+    NSLog(@"Delegate Receiving: %@", string);
+    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+        NSString *letter = [NSString letterForSymbol:string];
+        self.morseCodeLabel.text = letter;
+    }];
 }
 
 

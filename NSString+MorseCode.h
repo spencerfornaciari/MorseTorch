@@ -11,5 +11,6 @@
 @interface NSString (MorseCode)
 
 - (NSArray *)symbolsForString;
++ (NSString *)letterForSymbol:(NSString *)symbol;
 
 @end
