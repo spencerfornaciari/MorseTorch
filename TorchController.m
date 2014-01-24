@@ -31,7 +31,7 @@
         [self turnOnTorch:device];
         usleep(BASE_SLEEP);
         [self turnOffTorch:device];
-        usleep(BASE_SLEEP);
+        usleep(BASE_SLEEP *2);
     }
 }
 
@@ -42,7 +42,7 @@
         [self turnOnTorch:device];
         usleep(BASE_SLEEP * 3);
         [self turnOffTorch:device];
-        usleep(BASE_SLEEP);
+        usleep(BASE_SLEEP * 2);
     }
 }
 

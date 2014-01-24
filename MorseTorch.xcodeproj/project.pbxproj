@@ -1,1172 +1,553 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>2CA7B4824BF748BA8ED8EB20</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C689F6F08C934B808253C435</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5E30A131E79B4AB6844A2FD7</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Pods-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>883F6F953DA94F96A29D3F1D</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>8949F6DF188DC2C10069E9D4</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8949F6F1188DC2C10069E9D4</string>
-				<string>8949F710188DC2C10069E9D4</string>
-				<string>8949F6EA188DC2C10069E9D4</string>
-				<string>8949F6E9188DC2C10069E9D4</string>
-				<string>A8896FACB1D841D9AD4C63E4</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8949F6E0188DC2C10069E9D4</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>CLASSPREFIX</key>
-				<string>SF</string>
-				<key>LastUpgradeCheck</key>
-				<string>0500</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>Spencer Fornaciari</string>
-				<key>TargetAttributes</key>
-				<dict>
-					<key>8949F708188DC2C10069E9D4</key>
-					<dict>
-						<key>TestTargetID</key>
-						<string>8949F6E7188DC2C10069E9D4</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>8949F6E3188DC2C10069E9D4</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-				<string>Base</string>
-			</array>
-			<key>mainGroup</key>
-			<string>8949F6DF188DC2C10069E9D4</string>
-			<key>productRefGroup</key>
-			<string>8949F6E9188DC2C10069E9D4</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>8949F6E7188DC2C10069E9D4</string>
-				<string>8949F708188DC2C10069E9D4</string>
-			</array>
-		</dict>
-		<key>8949F6E3188DC2C10069E9D4</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>8949F718188DC2C10069E9D4</string>
-				<string>8949F719188DC2C10069E9D4</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>8949F6E4188DC2C10069E9D4</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>898F4CB8188F21BD0060E847</string>
-				<string>8949F6F8188DC2C10069E9D4</string>
-				<string>8949F702188DC2C10069E9D4</string>
-				<string>8949F6FC188DC2C10069E9D4</string>
-				<string>8949F722188DC2EF0069E9D4</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>8949F6E5188DC2C10069E9D4</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>8949F6EE188DC2C10069E9D4</string>
-				<string>8949F6F0188DC2C10069E9D4</string>
-				<string>8949F6EC188DC2C10069E9D4</string>
-				<string>2CA7B4824BF748BA8ED8EB20</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>8949F6E6188DC2C10069E9D4</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>8949F704188DC2C10069E9D4</string>
-				<string>8949F6F6188DC2C10069E9D4</string>
-				<string>8949F6FF188DC2C10069E9D4</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>8949F6E7188DC2C10069E9D4</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>8949F71A188DC2C10069E9D4</string>
-			<key>buildPhases</key>
-			<array>
-				<string>883F6F953DA94F96A29D3F1D</string>
-				<string>8949F6E4188DC2C10069E9D4</string>
-				<string>8949F6E5188DC2C10069E9D4</string>
-				<string>8949F6E6188DC2C10069E9D4</string>
-				<string>5E30A131E79B4AB6844A2FD7</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>MorseTorch</string>
-			<key>productName</key>
-			<string>MorseTorch</string>
-			<key>productReference</key>
-			<string>8949F6E8188DC2C10069E9D4</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>8949F6E8188DC2C10069E9D4</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>MorseTorch.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>8949F6E9188DC2C10069E9D4</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8949F6E8188DC2C10069E9D4</string>
-				<string>8949F709188DC2C10069E9D4</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8949F6EA188DC2C10069E9D4</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8949F6EB188DC2C10069E9D4</string>
-				<string>8949F6ED188DC2C10069E9D4</string>
-				<string>8949F6EF188DC2C10069E9D4</string>
-				<string>8949F70A188DC2C10069E9D4</string>
-				<string>C689F6F08C934B808253C435</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8949F6EB188DC2C10069E9D4</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>8949F6EC188DC2C10069E9D4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8949F6EB188DC2C10069E9D4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8949F6ED188DC2C10069E9D4</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>CoreGraphics.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/CoreGraphics.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>8949F6EE188DC2C10069E9D4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8949F6ED188DC2C10069E9D4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8949F6EF188DC2C10069E9D4</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>UIKit.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/UIKit.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>8949F6F0188DC2C10069E9D4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8949F6EF188DC2C10069E9D4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8949F6F1188DC2C10069E9D4</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>898F4CB6188F21BD0060E847</string>
-				<string>898F4CB7188F21BD0060E847</string>
-				<string>8949F720188DC2EF0069E9D4</string>
-				<string>8949F721188DC2EF0069E9D4</string>
-				<string>8949F6FA188DC2C10069E9D4</string>
-				<string>8949F6FB188DC2C10069E9D4</string>
-				<string>8949F6FD188DC2C10069E9D4</string>
-				<string>8949F700188DC2C10069E9D4</string>
-				<string>8949F701188DC2C10069E9D4</string>
-				<string>8949F703188DC2C10069E9D4</string>
-				<string>8949F6F2188DC2C10069E9D4</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>MorseTorch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8949F6F2188DC2C10069E9D4</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8949F6F3188DC2C10069E9D4</string>
-				<string>8949F6F4188DC2C10069E9D4</string>
-				<string>8949F6F7188DC2C10069E9D4</string>
-				<string>8949F6F9188DC2C10069E9D4</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8949F6F3188DC2C10069E9D4</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>MorseTorch-Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8949F6F4188DC2C10069E9D4</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8949F6F5188DC2C10069E9D4</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8949F6F5188DC2C10069E9D4</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.strings</string>
-			<key>name</key>
-			<string>en</string>
-			<key>path</key>
-			<string>en.lproj/InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8949F6F6188DC2C10069E9D4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8949F6F4188DC2C10069E9D4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8949F6F7188DC2C10069E9D4</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>main.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8949F6F8188DC2C10069E9D4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8949F6F7188DC2C10069E9D4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8949F6F9188DC2C10069E9D4</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>MorseTorch-Prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8949F6FA188DC2C10069E9D4</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>SFAppDelegate.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8949F6FB188DC2C10069E9D4</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>SFAppDelegate.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8949F6FC188DC2C10069E9D4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8949F6FB188DC2C10069E9D4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8949F6FD188DC2C10069E9D4</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8949F6FE188DC2C10069E9D4</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8949F6FE188DC2C10069E9D4</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8949F6FF188DC2C10069E9D4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8949F6FD188DC2C10069E9D4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8949F700188DC2C10069E9D4</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>SFViewController.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8949F701188DC2C10069E9D4</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>SFViewController.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8949F702188DC2C10069E9D4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8949F701188DC2C10069E9D4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8949F703188DC2C10069E9D4</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>Images.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8949F704188DC2C10069E9D4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8949F703188DC2C10069E9D4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8949F705188DC2C10069E9D4</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>8949F717188DC2C10069E9D4</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>8949F706188DC2C10069E9D4</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>8949F70B188DC2C10069E9D4</string>
-				<string>8949F70D188DC2C10069E9D4</string>
-				<string>8949F70C188DC2C10069E9D4</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>8949F707188DC2C10069E9D4</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>8949F715188DC2C10069E9D4</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>8949F708188DC2C10069E9D4</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>8949F71D188DC2C10069E9D4</string>
-			<key>buildPhases</key>
-			<array>
-				<string>8949F705188DC2C10069E9D4</string>
-				<string>8949F706188DC2C10069E9D4</string>
-				<string>8949F707188DC2C10069E9D4</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>8949F70F188DC2C10069E9D4</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>MorseTorchTests</string>
-			<key>productName</key>
-			<string>MorseTorchTests</string>
-			<key>productReference</key>
-			<string>8949F709188DC2C10069E9D4</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.unit-test</string>
-		</dict>
-		<key>8949F709188DC2C10069E9D4</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>MorseTorchTests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>8949F70A188DC2C10069E9D4</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>XCTest.framework</string>
-			<key>path</key>
-			<string>Library/Frameworks/XCTest.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>8949F70B188DC2C10069E9D4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8949F70A188DC2C10069E9D4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8949F70C188DC2C10069E9D4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8949F6EB188DC2C10069E9D4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8949F70D188DC2C10069E9D4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8949F6EF188DC2C10069E9D4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8949F70E188DC2C10069E9D4</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>8949F6E0188DC2C10069E9D4</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>8949F6E7188DC2C10069E9D4</string>
-			<key>remoteInfo</key>
-			<string>MorseTorch</string>
-		</dict>
-		<key>8949F70F188DC2C10069E9D4</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>8949F6E7188DC2C10069E9D4</string>
-			<key>targetProxy</key>
-			<string>8949F70E188DC2C10069E9D4</string>
-		</dict>
-		<key>8949F710188DC2C10069E9D4</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8949F716188DC2C10069E9D4</string>
-				<string>8949F711188DC2C10069E9D4</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>MorseTorchTests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8949F711188DC2C10069E9D4</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8949F712188DC2C10069E9D4</string>
-				<string>8949F713188DC2C10069E9D4</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8949F712188DC2C10069E9D4</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>MorseTorchTests-Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8949F713188DC2C10069E9D4</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8949F714188DC2C10069E9D4</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8949F714188DC2C10069E9D4</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.strings</string>
-			<key>name</key>
-			<string>en</string>
-			<key>path</key>
-			<string>en.lproj/InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8949F715188DC2C10069E9D4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8949F713188DC2C10069E9D4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8949F716188DC2C10069E9D4</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>MorseTorchTests.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8949F717188DC2C10069E9D4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8949F716188DC2C10069E9D4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8949F718188DC2C10069E9D4</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>ARCHS</key>
-				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.0</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>8949F719188DC2C10069E9D4</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>ARCHS</key>
-				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.0</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>8949F71A188DC2C10069E9D4</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>8949F71B188DC2C10069E9D4</string>
-				<string>8949F71C188DC2C10069E9D4</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>8949F71B188DC2C10069E9D4</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>A8896FACB1D841D9AD4C63E4</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
-				<string>LaunchImage</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>MorseTorch/MorseTorch-Prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>MorseTorch/MorseTorch-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>app</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>8949F71C188DC2C10069E9D4</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>A8896FACB1D841D9AD4C63E4</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
-				<string>LaunchImage</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>MorseTorch/MorseTorch-Prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>MorseTorch/MorseTorch-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>app</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>8949F71D188DC2C10069E9D4</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>8949F71E188DC2C10069E9D4</string>
-				<string>8949F71F188DC2C10069E9D4</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>8949F71E188DC2C10069E9D4</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ARCHS</key>
-				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
-				<key>BUNDLE_LOADER</key>
-				<string>$(BUILT_PRODUCTS_DIR)/MorseTorch.app/MorseTorch</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
-					<string>$(inherited)</string>
-					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
-				</array>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>MorseTorch/MorseTorch-Prefix.pch</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>INFOPLIST_FILE</key>
-				<string>MorseTorchTests/MorseTorchTests-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUNDLE_LOADER)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>xctest</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>8949F71F188DC2C10069E9D4</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ARCHS</key>
-				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
-				<key>BUNDLE_LOADER</key>
-				<string>$(BUILT_PRODUCTS_DIR)/MorseTorch.app/MorseTorch</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
-					<string>$(inherited)</string>
-					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
-				</array>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>MorseTorch/MorseTorch-Prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>MorseTorchTests/MorseTorchTests-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUNDLE_LOADER)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>xctest</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>8949F720188DC2EF0069E9D4</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>NSString+MorseCode.h</string>
-			<key>path</key>
-			<string>../NSString+MorseCode.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8949F721188DC2EF0069E9D4</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>NSString+MorseCode.m</string>
-			<key>path</key>
-			<string>../NSString+MorseCode.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8949F722188DC2EF0069E9D4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8949F721188DC2EF0069E9D4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>898F4CB6188F21BD0060E847</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>TorchController.h</string>
-			<key>path</key>
-			<string>../TorchController.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>898F4CB7188F21BD0060E847</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>TorchController.m</string>
-			<key>path</key>
-			<string>../TorchController.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>898F4CB8188F21BD0060E847</key>
-		<dict>
-			<key>fileRef</key>
-			<string>898F4CB7188F21BD0060E847</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A8896FACB1D841D9AD4C63E4</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Pods.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C689F6F08C934B808253C435</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>8949F6E0188DC2C10069E9D4</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2CA7B4824BF748BA8ED8EB20 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C689F6F08C934B808253C435 /* libPods.a */; };
+		8949F6EC188DC2C10069E9D4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8949F6EB188DC2C10069E9D4 /* Foundation.framework */; };
+		8949F6EE188DC2C10069E9D4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8949F6ED188DC2C10069E9D4 /* CoreGraphics.framework */; };
+		8949F6F0188DC2C10069E9D4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8949F6EF188DC2C10069E9D4 /* UIKit.framework */; };
+		8949F6F6188DC2C10069E9D4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8949F6F4188DC2C10069E9D4 /* InfoPlist.strings */; };
+		8949F6F8188DC2C10069E9D4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8949F6F7188DC2C10069E9D4 /* main.m */; };
+		8949F6FC188DC2C10069E9D4 /* SFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8949F6FB188DC2C10069E9D4 /* SFAppDelegate.m */; };
+		8949F6FF188DC2C10069E9D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8949F6FD188DC2C10069E9D4 /* Main.storyboard */; };
+		8949F702188DC2C10069E9D4 /* SFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8949F701188DC2C10069E9D4 /* SFViewController.m */; };
+		8949F704188DC2C10069E9D4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8949F703188DC2C10069E9D4 /* Images.xcassets */; };
+		8949F70B188DC2C10069E9D4 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8949F70A188DC2C10069E9D4 /* XCTest.framework */; };
+		8949F70C188DC2C10069E9D4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8949F6EB188DC2C10069E9D4 /* Foundation.framework */; };
+		8949F70D188DC2C10069E9D4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8949F6EF188DC2C10069E9D4 /* UIKit.framework */; };
+		8949F715188DC2C10069E9D4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8949F713188DC2C10069E9D4 /* InfoPlist.strings */; };
+		8949F717188DC2C10069E9D4 /* MorseTorchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8949F716188DC2C10069E9D4 /* MorseTorchTests.m */; };
+		8949F722188DC2EF0069E9D4 /* NSString+MorseCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8949F721188DC2EF0069E9D4 /* NSString+MorseCode.m */; };
+		895B49C318930E70001874D5 /* CFMagicEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = 895B49C218930E70001874D5 /* CFMagicEvents.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		895B49C718931017001874D5 /* SFReceiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 895B49C618931017001874D5 /* SFReceiveViewController.m */; };
+		898F4CB8188F21BD0060E847 /* TorchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 898F4CB7188F21BD0060E847 /* TorchController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8949F70E188DC2C10069E9D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8949F6E0188DC2C10069E9D4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8949F6E7188DC2C10069E9D4;
+			remoteInfo = MorseTorch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8949F6E8188DC2C10069E9D4 /* MorseTorch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MorseTorch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8949F6EB188DC2C10069E9D4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8949F6ED188DC2C10069E9D4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8949F6EF188DC2C10069E9D4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8949F6F3188DC2C10069E9D4 /* MorseTorch-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MorseTorch-Info.plist"; sourceTree = "<group>"; };
+		8949F6F5188DC2C10069E9D4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8949F6F7188DC2C10069E9D4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8949F6F9188DC2C10069E9D4 /* MorseTorch-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MorseTorch-Prefix.pch"; sourceTree = "<group>"; };
+		8949F6FA188DC2C10069E9D4 /* SFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFAppDelegate.h; sourceTree = "<group>"; };
+		8949F6FB188DC2C10069E9D4 /* SFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFAppDelegate.m; sourceTree = "<group>"; };
+		8949F6FE188DC2C10069E9D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8949F700188DC2C10069E9D4 /* SFViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFViewController.h; sourceTree = "<group>"; };
+		8949F701188DC2C10069E9D4 /* SFViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFViewController.m; sourceTree = "<group>"; };
+		8949F703188DC2C10069E9D4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8949F709188DC2C10069E9D4 /* MorseTorchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MorseTorchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8949F70A188DC2C10069E9D4 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		8949F712188DC2C10069E9D4 /* MorseTorchTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MorseTorchTests-Info.plist"; sourceTree = "<group>"; };
+		8949F714188DC2C10069E9D4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8949F716188DC2C10069E9D4 /* MorseTorchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MorseTorchTests.m; sourceTree = "<group>"; };
+		8949F720188DC2EF0069E9D4 /* NSString+MorseCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+MorseCode.h"; path = "../NSString+MorseCode.h"; sourceTree = "<group>"; };
+		8949F721188DC2EF0069E9D4 /* NSString+MorseCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+MorseCode.m"; path = "../NSString+MorseCode.m"; sourceTree = "<group>"; };
+		895B49C118930E70001874D5 /* CFMagicEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CFMagicEvents.h; path = ../CFMagicEvents.h; sourceTree = "<group>"; };
+		895B49C218930E70001874D5 /* CFMagicEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CFMagicEvents.m; path = ../CFMagicEvents.m; sourceTree = "<group>"; };
+		895B49C518931017001874D5 /* SFReceiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFReceiveViewController.h; path = ../SFReceiveViewController.h; sourceTree = "<group>"; };
+		895B49C618931017001874D5 /* SFReceiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFReceiveViewController.m; path = ../SFReceiveViewController.m; sourceTree = "<group>"; };
+		898F4CB6188F21BD0060E847 /* TorchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TorchController.h; path = ../TorchController.h; sourceTree = "<group>"; };
+		898F4CB7188F21BD0060E847 /* TorchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TorchController.m; path = ../TorchController.m; sourceTree = "<group>"; };
+		A8896FACB1D841D9AD4C63E4 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		C689F6F08C934B808253C435 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8949F6E5188DC2C10069E9D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8949F6EE188DC2C10069E9D4 /* CoreGraphics.framework in Frameworks */,
+				8949F6F0188DC2C10069E9D4 /* UIKit.framework in Frameworks */,
+				8949F6EC188DC2C10069E9D4 /* Foundation.framework in Frameworks */,
+				2CA7B4824BF748BA8ED8EB20 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8949F706188DC2C10069E9D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8949F70B188DC2C10069E9D4 /* XCTest.framework in Frameworks */,
+				8949F70D188DC2C10069E9D4 /* UIKit.framework in Frameworks */,
+				8949F70C188DC2C10069E9D4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8949F6DF188DC2C10069E9D4 = {
+			isa = PBXGroup;
+			children = (
+				8949F6F1188DC2C10069E9D4 /* MorseTorch */,
+				8949F710188DC2C10069E9D4 /* MorseTorchTests */,
+				8949F6EA188DC2C10069E9D4 /* Frameworks */,
+				8949F6E9188DC2C10069E9D4 /* Products */,
+				A8896FACB1D841D9AD4C63E4 /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		8949F6E9188DC2C10069E9D4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8949F6E8188DC2C10069E9D4 /* MorseTorch.app */,
+				8949F709188DC2C10069E9D4 /* MorseTorchTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8949F6EA188DC2C10069E9D4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8949F6EB188DC2C10069E9D4 /* Foundation.framework */,
+				8949F6ED188DC2C10069E9D4 /* CoreGraphics.framework */,
+				8949F6EF188DC2C10069E9D4 /* UIKit.framework */,
+				8949F70A188DC2C10069E9D4 /* XCTest.framework */,
+				C689F6F08C934B808253C435 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8949F6F1188DC2C10069E9D4 /* MorseTorch */ = {
+			isa = PBXGroup;
+			children = (
+				895B49C518931017001874D5 /* SFReceiveViewController.h */,
+				895B49C618931017001874D5 /* SFReceiveViewController.m */,
+				895B49C418930E77001874D5 /* CFMagicEvents */,
+				898F4CB6188F21BD0060E847 /* TorchController.h */,
+				898F4CB7188F21BD0060E847 /* TorchController.m */,
+				8949F720188DC2EF0069E9D4 /* NSString+MorseCode.h */,
+				8949F721188DC2EF0069E9D4 /* NSString+MorseCode.m */,
+				8949F6FA188DC2C10069E9D4 /* SFAppDelegate.h */,
+				8949F6FB188DC2C10069E9D4 /* SFAppDelegate.m */,
+				8949F6FD188DC2C10069E9D4 /* Main.storyboard */,
+				8949F700188DC2C10069E9D4 /* SFViewController.h */,
+				8949F701188DC2C10069E9D4 /* SFViewController.m */,
+				8949F703188DC2C10069E9D4 /* Images.xcassets */,
+				8949F6F2188DC2C10069E9D4 /* Supporting Files */,
+			);
+			path = MorseTorch;
+			sourceTree = "<group>";
+		};
+		8949F6F2188DC2C10069E9D4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8949F6F3188DC2C10069E9D4 /* MorseTorch-Info.plist */,
+				8949F6F4188DC2C10069E9D4 /* InfoPlist.strings */,
+				8949F6F7188DC2C10069E9D4 /* main.m */,
+				8949F6F9188DC2C10069E9D4 /* MorseTorch-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8949F710188DC2C10069E9D4 /* MorseTorchTests */ = {
+			isa = PBXGroup;
+			children = (
+				8949F716188DC2C10069E9D4 /* MorseTorchTests.m */,
+				8949F711188DC2C10069E9D4 /* Supporting Files */,
+			);
+			path = MorseTorchTests;
+			sourceTree = "<group>";
+		};
+		8949F711188DC2C10069E9D4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8949F712188DC2C10069E9D4 /* MorseTorchTests-Info.plist */,
+				8949F713188DC2C10069E9D4 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		895B49C418930E77001874D5 /* CFMagicEvents */ = {
+			isa = PBXGroup;
+			children = (
+				895B49C118930E70001874D5 /* CFMagicEvents.h */,
+				895B49C218930E70001874D5 /* CFMagicEvents.m */,
+			);
+			name = CFMagicEvents;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8949F6E7188DC2C10069E9D4 /* MorseTorch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8949F71A188DC2C10069E9D4 /* Build configuration list for PBXNativeTarget "MorseTorch" */;
+			buildPhases = (
+				883F6F953DA94F96A29D3F1D /* Check Pods Manifest.lock */,
+				8949F6E4188DC2C10069E9D4 /* Sources */,
+				8949F6E5188DC2C10069E9D4 /* Frameworks */,
+				8949F6E6188DC2C10069E9D4 /* Resources */,
+				5E30A131E79B4AB6844A2FD7 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MorseTorch;
+			productName = MorseTorch;
+			productReference = 8949F6E8188DC2C10069E9D4 /* MorseTorch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8949F708188DC2C10069E9D4 /* MorseTorchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8949F71D188DC2C10069E9D4 /* Build configuration list for PBXNativeTarget "MorseTorchTests" */;
+			buildPhases = (
+				8949F705188DC2C10069E9D4 /* Sources */,
+				8949F706188DC2C10069E9D4 /* Frameworks */,
+				8949F707188DC2C10069E9D4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8949F70F188DC2C10069E9D4 /* PBXTargetDependency */,
+			);
+			name = MorseTorchTests;
+			productName = MorseTorchTests;
+			productReference = 8949F709188DC2C10069E9D4 /* MorseTorchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8949F6E0188DC2C10069E9D4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SF;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Spencer Fornaciari";
+				TargetAttributes = {
+					8949F708188DC2C10069E9D4 = {
+						TestTargetID = 8949F6E7188DC2C10069E9D4;
+					};
+				};
+			};
+			buildConfigurationList = 8949F6E3188DC2C10069E9D4 /* Build configuration list for PBXProject "MorseTorch" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8949F6DF188DC2C10069E9D4;
+			productRefGroup = 8949F6E9188DC2C10069E9D4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8949F6E7188DC2C10069E9D4 /* MorseTorch */,
+				8949F708188DC2C10069E9D4 /* MorseTorchTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8949F6E6188DC2C10069E9D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8949F704188DC2C10069E9D4 /* Images.xcassets in Resources */,
+				8949F6F6188DC2C10069E9D4 /* InfoPlist.strings in Resources */,
+				8949F6FF188DC2C10069E9D4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8949F707188DC2C10069E9D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8949F715188DC2C10069E9D4 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5E30A131E79B4AB6844A2FD7 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		883F6F953DA94F96A29D3F1D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8949F6E4188DC2C10069E9D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				898F4CB8188F21BD0060E847 /* TorchController.m in Sources */,
+				895B49C718931017001874D5 /* SFReceiveViewController.m in Sources */,
+				895B49C318930E70001874D5 /* CFMagicEvents.m in Sources */,
+				8949F6F8188DC2C10069E9D4 /* main.m in Sources */,
+				8949F702188DC2C10069E9D4 /* SFViewController.m in Sources */,
+				8949F6FC188DC2C10069E9D4 /* SFAppDelegate.m in Sources */,
+				8949F722188DC2EF0069E9D4 /* NSString+MorseCode.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8949F705188DC2C10069E9D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8949F717188DC2C10069E9D4 /* MorseTorchTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8949F70F188DC2C10069E9D4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8949F6E7188DC2C10069E9D4 /* MorseTorch */;
+			targetProxy = 8949F70E188DC2C10069E9D4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8949F6F4188DC2C10069E9D4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8949F6F5188DC2C10069E9D4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8949F6FD188DC2C10069E9D4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8949F6FE188DC2C10069E9D4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8949F713188DC2C10069E9D4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8949F714188DC2C10069E9D4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8949F718188DC2C10069E9D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8949F719188DC2C10069E9D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8949F71B188DC2C10069E9D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8896FACB1D841D9AD4C63E4 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MorseTorch/MorseTorch-Prefix.pch";
+				INFOPLIST_FILE = "MorseTorch/MorseTorch-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8949F71C188DC2C10069E9D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8896FACB1D841D9AD4C63E4 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MorseTorch/MorseTorch-Prefix.pch";
+				INFOPLIST_FILE = "MorseTorch/MorseTorch-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		8949F71E188DC2C10069E9D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MorseTorch.app/MorseTorch";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MorseTorch/MorseTorch-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MorseTorchTests/MorseTorchTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		8949F71F188DC2C10069E9D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MorseTorch.app/MorseTorch";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MorseTorch/MorseTorch-Prefix.pch";
+				INFOPLIST_FILE = "MorseTorchTests/MorseTorchTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8949F6E3188DC2C10069E9D4 /* Build configuration list for PBXProject "MorseTorch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8949F718188DC2C10069E9D4 /* Debug */,
+				8949F719188DC2C10069E9D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8949F71A188DC2C10069E9D4 /* Build configuration list for PBXNativeTarget "MorseTorch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8949F71B188DC2C10069E9D4 /* Debug */,
+				8949F71C188DC2C10069E9D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8949F71D188DC2C10069E9D4 /* Build configuration list for PBXNativeTarget "MorseTorchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8949F71E188DC2C10069E9D4 /* Debug */,
+				8949F71F188DC2C10069E9D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8949F6E0188DC2C10069E9D4 /* Project object */;
+}

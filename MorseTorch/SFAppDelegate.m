@@ -7,12 +7,21 @@
 //
 
 #import "SFAppDelegate.h"
+#import "CFMagicEvents.h"
 
+@interface SFAppDelegate ()
+{
+    CFMagicEvents *_cfMagicEvents;
+    
+}
+@end
 @implementation SFAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    _cfMagicEvents  = [[CFMagicEvents alloc] init];
+    [_cfMagicEvents startCapture];
     return YES;
 }
 							
