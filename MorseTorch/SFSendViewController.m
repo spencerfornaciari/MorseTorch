@@ -118,7 +118,7 @@
     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
         
         NSString *letter = [NSString letterForSymbol:string];
-        [ProgressHUD show:letter];
+        [ProgressHUD show:[NSString stringWithFormat:@"%@ : %@", letter, string]];
     }];
 }
 

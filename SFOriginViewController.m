@@ -9,6 +9,8 @@
 #import "SFOriginViewController.h"
 
 @interface SFOriginViewController ()
+@property (strong, nonatomic) IBOutlet UIButton *sendButton;
+@property (strong, nonatomic) IBOutlet UIButton *receiveButton;
 
 @end
 
@@ -26,6 +28,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.sendButton.backgroundColor = [UIColor blueColor];
+    self.sendButton.tintColor = [UIColor whiteColor];
+    
+    self.receiveButton.backgroundColor = [UIColor redColor];
+    self.receiveButton.tintColor = [UIColor whiteColor];
 	// Do any additional setup after loading the view.
 }
 

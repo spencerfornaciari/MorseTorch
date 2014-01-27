@@ -68,12 +68,26 @@
 {
     dispatch_async(dispatch_get_main_queue(), ^{
         //NSLog(@"Off: %li", (long)self.countOff);
+        //if ([_magicEvent returnBrightness] > 30) {
         
         if (self.countOn > 18) {
-            NSLog(@"-");
-        } else if (self.countOn >= 6) {
-            NSLog(@".");
+            string = [string stringByAppendingString:@"-"];
+            NSLog(@"String: %@", string);
+            NSLog(@"%ld", (long)self.countOn);
+            //NSLog(@"%d", [self.magicEvent returnBrightness]);
+        } else if (self.countOn > 6) {
+            string = [string stringByAppendingString:@"."];
+            NSLog(@"String: %@", string);
+            NSLog(@"%ld", (long)self.countOn);
+
+            //NSLog(@"%d", [self.magicEvent returnBrightness]);
+
         }
+        //NSLog(@"On: %ld", self.countOn);
+        self.countOn = 0;
+        self.countOff++;
+        //}
+        
         //        self.date1 = [NSDate date];
         //        self.distanceBetweenDates = [self.date1 timeIntervalSinceDate:self.date2];
         //
@@ -83,8 +97,7 @@
         //            NSLog(@".");
         //        }
         
-        self.countOn = 0;
-        self.countOff++;
+
         
         
 //        self.date2 = [NSDate date];
@@ -124,14 +137,19 @@
 {
     dispatch_async(dispatch_get_main_queue(), ^{
         //NSLog(@"On: %li", (long)self.countOn);
-        
-        if (self.countOff > 30) {
-            NSLog(@"PAUSE");
-        }
-        
-        self.countOff = 0;
-        self.countOn++;
+        //if ([_magicEvent returnBrightness] < 30) {
 
+            if (self.countOff > 30) {
+                self.receivedMessage.text = [NSString letterForSymbol:string];
+                string = @"";
+                
+                NSLog(@"%ld", (long)self.countOn);
+            }
+       // NSLog(@"Off: %ld", self.countOff);
+
+            self.countOff = 0;
+            self.countOn++;
+        //}
         
         //NSLog(@"EVENT NOT DETECTED");
       // NSLog(@"%d", [self.magicEvent returnBrightness]);
