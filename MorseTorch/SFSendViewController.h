@@ -12,6 +12,6 @@
 #import "NSString+MorseCode.h"
 #import <ProgressHUD.h>
 
-@interface SFViewController : UIViewController <UITextFieldDelegate, TorchControllerDelegate>
+@interface SFSendViewController : UIViewController <UITextFieldDelegate, TorchControllerDelegate>
 
 @end

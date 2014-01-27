@@ -11,8 +11,9 @@
 
 @interface SFReceiveViewController ()
 {
-    NSDate *date1, *date2;
-    NSString *string;
+    BOOL isLetter;
+    NSString *string, *word;
+    NSMutableArray *letterArray;
 }
 
 @end
@@ -32,6 +33,12 @@
 {
     [super viewDidLoad];
     string = @"";
+    self.receivedMessage.text = @"";
+    _magicEvent = [CFMagicEvents new];
+    self.date1 = [NSDate date];
+    self.date2 = [NSDate date];
+    self.countOn = 0;
+    self.countOff = 0;
 	// Do any additional setup after loading the view.
 }
 
@@ -44,9 +51,6 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
-    date1 = [NSDate date];
-    date2 = [NSDate date];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveOnMagicEventDetected:) name:@"onMagicEventDetected" object:nil];
     
@@ -63,46 +67,61 @@
 -(void)receiveOnMagicEventDetected:(NSNotification *) notification
 {
     dispatch_async(dispatch_get_main_queue(), ^{
-        date1 = [NSDate date];
-        NSTimeInterval distanceBetweenDates = [date1 timeIntervalSinceDate:date2];
+        self.countOff = 0;
+        self.countOn++;
         
-        if (distanceBetweenDates < .1) {
-            NSLog(@"%@", string);
-            self.receivedMessage.text = @"DOT";
-            string = [string stringByAppendingString:@"."];
-//        } else if (distanceBetweenDates > .2 && [distanceBetweenDates < .3)
-        } else if (distanceBetweenDates > .3){
-            string = [string stringByAppendingString:@"-"];
+//        self.date2 = [NSDate date];
+//        self.distanceBetweenDates = [self.date2 timeIntervalSinceDate:self.date1];
+//        
+//        
+//        if (self.distanceBetweenDates < .4) {
+//            
+//            
+//            
+//        } else {
+//            // string = [string stringByAppendingString:@" "];
+//            // [letterArray addObject:@" "];
+//            
+//            // self.receivedMessage.text = [NSString letterForSymbol:string];
+//            
+//            //NSLog(@"%f", self.distanceBetweenDates);
+//            
+//            self.receivedMessage.text = @"PAUSE";
+//        }
+//        //NSLog(@"%f", self.distanceBetweenDates);
+//        //NSLog(@"DASH");
+//        
+//        
+//        self.date1 = [NSDate date];
+        
 
-                NSLog(@"%@", string);
-            self.receivedMessage.text = @"DASH";
-        }
+            
+//        if ([self.magicEvent returnBrightness] > 30000) {
+//        }
         
-        //NSLog(@"%f", distanceBetweenDates);
-        
-        
-        
-        //YOUR CODE HERE
+         //YOUR CODE HERE
     });
 }
 
 -(void)receiveOnMagicEventNotDetected:(NSNotification *) notification
 {
     dispatch_async(dispatch_get_main_queue(), ^{
-        date2 = [NSDate date];
-        NSTimeInterval distanceBetweenDates = [date2 timeIntervalSinceDate:date1];
-        if (distanceBetweenDates > .5) {
-            string = [string stringByAppendingString:@" "];
-            NSLog(@"%@", string);
-            self.receivedMessage.text = @"PAUSE";
-
-        } else {
-            
-        }
-        //NSLog(@"%f", distanceBetweenDates);
-       // NSLog(@"DASH DASH DASH");
-
-    });
+        NSLog(@"%li", (long)self.countOn);
+//        self.date1 = [NSDate date];
+//        self.distanceBetweenDates = [self.date1 timeIntervalSinceDate:self.date2];
+//        
+//        if (self.distanceBetweenDates > .4) {
+//            NSLog(@"-");
+//        } else if (self.distanceBetweenDates > 0) {
+//            NSLog(@".");
+//        }
+        
+        self.countOn = 0;
+        self.countOff++;
+        
+        //NSLog(@"EVENT NOT DETECTED");
+      // NSLog(@"%d", [self.magicEvent returnBrightness]);
+                 });
 }
 
 @end

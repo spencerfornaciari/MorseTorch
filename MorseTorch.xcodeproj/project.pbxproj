@@ -15,7 +15,7 @@
 		8949F6F8188DC2C10069E9D4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8949F6F7188DC2C10069E9D4 /* main.m */; };
 		8949F6FC188DC2C10069E9D4 /* SFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8949F6FB188DC2C10069E9D4 /* SFAppDelegate.m */; };
 		8949F6FF188DC2C10069E9D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8949F6FD188DC2C10069E9D4 /* Main.storyboard */; };
-		8949F702188DC2C10069E9D4 /* SFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8949F701188DC2C10069E9D4 /* SFViewController.m */; };
+		8949F702188DC2C10069E9D4 /* SFSendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8949F701188DC2C10069E9D4 /* SFSendViewController.m */; };
 		8949F704188DC2C10069E9D4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8949F703188DC2C10069E9D4 /* Images.xcassets */; };
 		8949F70B188DC2C10069E9D4 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8949F70A188DC2C10069E9D4 /* XCTest.framework */; };
 		8949F70C188DC2C10069E9D4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8949F6EB188DC2C10069E9D4 /* Foundation.framework */; };
@@ -25,6 +25,7 @@
 		8949F722188DC2EF0069E9D4 /* NSString+MorseCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8949F721188DC2EF0069E9D4 /* NSString+MorseCode.m */; };
 		895B49C318930E70001874D5 /* CFMagicEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = 895B49C218930E70001874D5 /* CFMagicEvents.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		895B49C718931017001874D5 /* SFReceiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 895B49C618931017001874D5 /* SFReceiveViewController.m */; };
+		895B49CC1895E202001874D5 /* SFOriginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 895B49CB1895E202001874D5 /* SFOriginViewController.m */; };
 		898F4CB8188F21BD0060E847 /* TorchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 898F4CB7188F21BD0060E847 /* TorchController.m */; };
 /* End PBXBuildFile section */
 
@@ -50,8 +51,8 @@
 		8949F6FA188DC2C10069E9D4 /* SFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFAppDelegate.h; sourceTree = "<group>"; };
 		8949F6FB188DC2C10069E9D4 /* SFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFAppDelegate.m; sourceTree = "<group>"; };
 		8949F6FE188DC2C10069E9D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8949F700188DC2C10069E9D4 /* SFViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFViewController.h; sourceTree = "<group>"; };
-		8949F701188DC2C10069E9D4 /* SFViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFViewController.m; sourceTree = "<group>"; };
+		8949F700188DC2C10069E9D4 /* SFSendViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFSendViewController.h; sourceTree = "<group>"; };
+		8949F701188DC2C10069E9D4 /* SFSendViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFSendViewController.m; sourceTree = "<group>"; };
 		8949F703188DC2C10069E9D4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8949F709188DC2C10069E9D4 /* MorseTorchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MorseTorchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8949F70A188DC2C10069E9D4 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -64,6 +65,8 @@
 		895B49C218930E70001874D5 /* CFMagicEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CFMagicEvents.m; path = ../CFMagicEvents.m; sourceTree = "<group>"; };
 		895B49C518931017001874D5 /* SFReceiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFReceiveViewController.h; path = ../SFReceiveViewController.h; sourceTree = "<group>"; };
 		895B49C618931017001874D5 /* SFReceiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFReceiveViewController.m; path = ../SFReceiveViewController.m; sourceTree = "<group>"; };
+		895B49CA1895E202001874D5 /* SFOriginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFOriginViewController.h; path = ../SFOriginViewController.h; sourceTree = "<group>"; };
+		895B49CB1895E202001874D5 /* SFOriginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFOriginViewController.m; path = ../SFOriginViewController.m; sourceTree = "<group>"; };
 		898F4CB6188F21BD0060E847 /* TorchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TorchController.h; path = ../TorchController.h; sourceTree = "<group>"; };
 		898F4CB7188F21BD0060E847 /* TorchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TorchController.m; path = ../TorchController.m; sourceTree = "<group>"; };
 		A8896FACB1D841D9AD4C63E4 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -130,6 +133,8 @@
 		8949F6F1188DC2C10069E9D4 /* MorseTorch */ = {
 			isa = PBXGroup;
 			children = (
+				895B49CA1895E202001874D5 /* SFOriginViewController.h */,
+				895B49CB1895E202001874D5 /* SFOriginViewController.m */,
 				895B49C518931017001874D5 /* SFReceiveViewController.h */,
 				895B49C618931017001874D5 /* SFReceiveViewController.m */,
 				895B49C418930E77001874D5 /* CFMagicEvents */,
@@ -140,8 +145,8 @@
 				8949F6FA188DC2C10069E9D4 /* SFAppDelegate.h */,
 				8949F6FB188DC2C10069E9D4 /* SFAppDelegate.m */,
 				8949F6FD188DC2C10069E9D4 /* Main.storyboard */,
-				8949F700188DC2C10069E9D4 /* SFViewController.h */,
-				8949F701188DC2C10069E9D4 /* SFViewController.m */,
+				8949F700188DC2C10069E9D4 /* SFSendViewController.h */,
+				8949F701188DC2C10069E9D4 /* SFSendViewController.m */,
 				8949F703188DC2C10069E9D4 /* Images.xcassets */,
 				8949F6F2188DC2C10069E9D4 /* Supporting Files */,
 			);
@@ -322,8 +327,9 @@
 				898F4CB8188F21BD0060E847 /* TorchController.m in Sources */,
 				895B49C718931017001874D5 /* SFReceiveViewController.m in Sources */,
 				895B49C318930E70001874D5 /* CFMagicEvents.m in Sources */,
+				895B49CC1895E202001874D5 /* SFOriginViewController.m in Sources */,
 				8949F6F8188DC2C10069E9D4 /* main.m in Sources */,
-				8949F702188DC2C10069E9D4 /* SFViewController.m in Sources */,
+				8949F702188DC2C10069E9D4 /* SFSendViewController.m in Sources */,
 				8949F6FC188DC2C10069E9D4 /* SFAppDelegate.m in Sources */,
 				8949F722188DC2EF0069E9D4 /* NSString+MorseCode.m in Sources */,
 			);

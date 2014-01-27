@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Spencer Fornaciari. All rights reserved.
 //
 
-#import "SFViewController.h"
+#import "SFSendViewController.h"
 
-@interface SFViewController ()
+@interface SFSendViewController ()
 {
     BOOL lock;
     AVCaptureDevice *torch;
@@ -28,7 +28,7 @@
 
 @end
 
-@implementation SFViewController
+@implementation SFSendViewController
 
 - (void)viewDidLoad
 {

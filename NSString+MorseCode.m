@@ -45,6 +45,32 @@
     }
     
     //Translation from alphanumeric character to morse code
+    NSDictionary *translator = [NSString symbolLibrary];
+
+    NSArray *dictArray = [translator allKeys];
+    
+    for (int i = 0; i < dictArray.count; i++) {
+        
+        if ([dictArray[i] isEqualToString:letter]) {
+            return [translator valueForKey:dictArray[i]];
+        }
+    }
+    
+    return @"None";
+}
+
++ (NSString *)letterForSymbol:(NSString *)symbol
+{
+        
+        //Translation from alphanumeric character to morse code
+        NSDictionary *translator = [NSString symbolLibrary];
+    
+        NSArray *dictArray = [translator allKeysForObject:symbol];
+        return dictArray[0];
+}
+
++ (NSDictionary *)symbolLibrary
+{
     NSDictionary *symbolDictionary = @{@"A": @".-",
                                        @"B": @"-...",
                                        @"C": @"-.-.",
@@ -82,73 +108,8 @@
                                        @"8": @"---..",
                                        @"9": @"----.",
                                        @" ": @" "};
-    
-    NSArray *dictArray = [symbolDictionary allKeys];
-    
-    for (int i = 0; i < dictArray.count; i++) {
-        
-        if ([dictArray[i] isEqualToString:letter]) {
-            return [symbolDictionary valueForKey:dictArray[i]];
-        }
-    }
-    
-    return @"None";
-}
 
-+ (NSString *)letterForSymbol:(NSString *)symbol
-{
-        
-        //Translation from alphanumeric character to morse code
-        NSDictionary *symbolDictionary = @{@"A": @".-",
-                                           @"B": @"-...",
-                                           @"C": @"-.-.",
-                                           @"D": @"-..",
-                                           @"E": @".",
-                                           @"F": @"..-.",
-                                           @"G": @"--.",
-                                           @"H": @"....",
-                                           @"I": @"..",
-                                           @"J": @".---",
-                                           @"K": @"-.-",
-                                           @"L": @".-..",
-                                           @"M": @"--",
-                                           @"N": @"-.",
-                                           @"O": @"---",
-                                           @"P": @".--.",
-                                           @"Q": @"--.-",
-                                           @"R": @".-.",
-                                           @"S": @"...",
-                                           @"T": @"-",
-                                           @"U": @"..-",
-                                           @"V": @"...-",
-                                           @"W": @".--",
-                                           @"X": @"-..-",
-                                           @"Y": @"-.--",
-                                           @"Z": @"--..",
-                                           @"0": @"-----",
-                                           @"1": @".----",
-                                           @"2": @"..---",
-                                           @"3": @"...--",
-                                           @"4": @"....-",
-                                           @"5": @".....",
-                                           @"6": @"-....",
-                                           @"7": @"--...",
-                                           @"8": @"---..",
-                                           @"9": @"----.",
-                                           @" ": @" "};
-        
-        NSArray *dictArray = [symbolDictionary allKeysForObject:symbol];
-        return dictArray[0];
-    
-//        for (int i = 0; i < dictArray.count; i++) {
-//            
-//            if ([dictArray[i] isEqualToString:symbol]) {
-//                return [symbolDictionary objectForKey:dictArray[i]];
-//            }
-//        }
-//    
-//        return @"None";
-
+    return symbolDictionary;
 }
 
 

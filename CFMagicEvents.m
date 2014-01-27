@@ -36,7 +36,7 @@
 @interface CFMagicEvents() <AVCaptureAudioDataOutputSampleBufferDelegate>
 {
     AVCaptureSession *_captureSession;
-    int  _lastTotalBrightnessValue;
+    int _lastTotalBrightnessValue;
     int _brightnessThreshold;
     BOOL _started;
 }
@@ -96,12 +96,9 @@
     videoDataOutput.videoSettings = settings;
     [settings release];
     
-    AVCaptureConnection *conn = [videoDataOutput connectionWithMediaType:AVMediaTypeVideo];
+    //AVCaptureConnection *conn = [videoDataOutput connectionWithMediaType:AVMediaTypeVideo];
     
-    if (conn.isVideoMinFrameDurationSupported)
-        conn.videoMinFrameDuration = CMTimeMake(1, NUMBER_OF_FRAME_PER_S);
-    if (conn.isVideoMaxFrameDurationSupported)
-        conn.videoMaxFrameDuration = CMTimeMake(1, NUMBER_OF_FRAME_PER_S);
+    [self configureCameraForHighestFrameRate:captureDevice];
     
     //  we need a serial queue for the video capture delegate callback
     dispatch_queue_t queue = dispatch_queue_create("com.zuckerbreizh.cf", NULL);
@@ -117,6 +114,29 @@
     
     [pool release];
     
+}
+
+//John Clem code
+- (void)configureCameraForHighestFrameRate:(AVCaptureDevice *)device
+{
+    AVCaptureDeviceFormat *bestFormat = nil;
+    AVFrameRateRange *bestFrameRateRange = nil;
+    for ( AVCaptureDeviceFormat *format in [device formats] ) {
+        for ( AVFrameRateRange *range in format.videoSupportedFrameRateRanges ) {
+            if ( range.maxFrameRate > bestFrameRateRange.maxFrameRate ) {
+                bestFormat = format;
+                bestFrameRateRange = range;
+            }
+        }
+    }
+    if ( bestFormat ) {
+        if ( [device lockForConfiguration:NULL] == YES ) {
+            device.activeFormat = bestFormat;
+            device.activeVideoMinFrameDuration = bestFrameRateRange.minFrameDuration;
+            device.activeVideoMaxFrameDuration = bestFrameRateRange.minFrameDuration;
+            [device unlockForConfiguration];
+        }
+    }
 }
 
 -(void)updateBrightnessThreshold:(int)pValue
@@ -227,5 +247,11 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
     }
     
     return captureDevice;
+}
+
+- (int)returnBrightness
+{
+    int brightnessCorrection = _lastTotalBrightnessValue / 10000;
+    return brightnessCorrection;
 }
 @end

@@ -34,4 +34,6 @@
 -(BOOL)startCapture;
 -(BOOL)stopCapture;
 -(void)updateBrightnessThreshold:(int)pValue;
+-(int)returnBrightness;
+
 @end

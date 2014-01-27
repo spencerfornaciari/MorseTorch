@@ -7,8 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CFMagicEvents.h"
 
 @interface SFReceiveViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UILabel *receivedMessage;
+@property (nonatomic) NSTimeInterval  distanceBetweenDates, distanceBetweenDates2;
+@property (nonatomic) NSDate *date1, *date2;
+@property (nonatomic) NSInteger countOn, countOff;
+@property (nonatomic) CFMagicEvents *magicEvent;
+
 
 @end
