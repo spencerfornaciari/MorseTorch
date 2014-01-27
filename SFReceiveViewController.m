@@ -67,8 +67,25 @@
 -(void)receiveOnMagicEventDetected:(NSNotification *) notification
 {
     dispatch_async(dispatch_get_main_queue(), ^{
-        self.countOff = 0;
-        self.countOn++;
+        //NSLog(@"Off: %li", (long)self.countOff);
+        
+        if (self.countOn > 18) {
+            NSLog(@"-");
+        } else if (self.countOn >= 6) {
+            NSLog(@".");
+        }
+        //        self.date1 = [NSDate date];
+        //        self.distanceBetweenDates = [self.date1 timeIntervalSinceDate:self.date2];
+        //
+        //        if (self.distanceBetweenDates > .4) {
+        //            NSLog(@"-");
+        //        } else if (self.distanceBetweenDates > 0) {
+        //            NSLog(@".");
+        //        }
+        
+        self.countOn = 0;
+        self.countOff++;
+        
         
 //        self.date2 = [NSDate date];
 //        self.distanceBetweenDates = [self.date2 timeIntervalSinceDate:self.date1];
@@ -106,22 +123,19 @@
 -(void)receiveOnMagicEventNotDetected:(NSNotification *) notification
 {
     dispatch_async(dispatch_get_main_queue(), ^{
-        NSLog(@"%li", (long)self.countOn);
-//        self.date1 = [NSDate date];
-//        self.distanceBetweenDates = [self.date1 timeIntervalSinceDate:self.date2];
-//        
-//        if (self.distanceBetweenDates > .4) {
-//            NSLog(@"-");
-//        } else if (self.distanceBetweenDates > 0) {
-//            NSLog(@".");
-//        }
+        //NSLog(@"On: %li", (long)self.countOn);
         
-        self.countOn = 0;
-        self.countOff++;
+        if (self.countOff > 30) {
+            NSLog(@"PAUSE");
+        }
+        
+        self.countOff = 0;
+        self.countOn++;
+
         
         //NSLog(@"EVENT NOT DETECTED");
       // NSLog(@"%d", [self.magicEvent returnBrightness]);
-                 });
+    });
 }
 
 @end
